@@ -1,49 +1,72 @@
 /* créer ses propres varaibles : */
+
 :root {
     --main-clr: #e1ae9e;
 }
+
+
 /* appeler la var : var(--main-clr) */
+
 ::selection {
     color: white;
     background-color: var(--main-clr);
 }
+
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!      GENERAL    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
 html {
-    scroll-behavior: smooth;  /* ======> pour déplacement souple des anchors */
+    scroll-behavior: smooth;
+    /* ======> pour déplacement souple des anchors */
 }
+
 .wrapper {
-    width    : 1200px;
+    width: 1200px;
     max-width: 90%;
-    margin   : 0 auto;
+    margin: 0 auto;
 }
+
+
 /* -------------------      fonts --- */
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
-h1, h2, h3, h4, h5 {
-    color      : rgb(85, 85, 85);
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: rgb(85, 85, 85);
     font-weight: 300;
 }
+
 h1 {
     font-size: 45px;
 }
+
 h2 {
     font-weight: 300;
     font-size: 28px;
     color: #222222;
     margin: 20px 0;
 }
+
 .h2-span {
     font-weight: 700;
 }
+
 h3 {
     font-size: 24px;
-    margin   : 20px 0;
+    margin: 20px 0;
 }
+
 h4 {
     font-size: 14px;
 }
+
 h5 {
     font-weight: 600;
     color: #444444;
@@ -51,26 +74,30 @@ h5 {
     font-size: 15px;
     width: 100%;
 }
+
 a {
     text-decoration: none;
-    color          : #222222;
-    text-transform : uppercase;
+    color: #222222;
+    text-transform: uppercase;
 }
+
 .btn {
-    display        : flex;
+    display: flex;
     justify-content: center;
-    align-items    : center;
-    font-size      : 12px;
-    width          : 150px;
-    height         : 50px;
-    background     : var(--main-clr);
-    color          : white;
-    margin-top     : 30px;
+    align-items: center;
+    font-size: 12px;
+    width: 150px;
+    height: 50px;
+    background: var(--main-clr);
+    color: white;
+    margin-top: 30px;
 }
+
 section {
     margin: 100px 0;
     position: relative;
 }
+
 .circle-frame {
     /* border: 1px dotted red; */
     border-radius: 50%;
@@ -78,165 +105,204 @@ section {
     height: 180px;
     overflow: hidden;
 }
+
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!     HEADER      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
 /* ************************************     NAVBAR      *************************************** */
+
 .navbar {
     text-align: center;
 }
+
 .navbar [alt="logo"] {
-    width     : 250px;
+    width: 250px;
     margin-top: 50px;
 }
+
 .main-nav a {
     font-weight: 300;
-    font-size  : 14px;
-    color      : rgb(100, 100, 100);
-    margin     : 50px 15px;
-    transition : 0.2s ease-in-out;
-}
-.main-nav a:hover {
-    color     : var(--main-clr);
+    font-size: 14px;
+    color: rgb(100, 100, 100);
+    margin: 50px 15px;
     transition: 0.2s ease-in-out;
 }
+
+.main-nav a:hover {
+    color: var(--main-clr);
+    transition: 0.2s ease-in-out;
+}
+
 .main-nav .fab {
     font-size: 16px;
 }
+
 .main-nav .fab:hover {
     color: rgb(10, 10, 10);
 }
+
+
 /* ************************************     BANNER      *************************************** */
+
+
 /* -----------------------------------------------------------------     SPLASH */
+
 .banner-splash {
-    display    : flex;
-    flex-flow  : row-reverse wrap;
+    display: flex;
+    flex-flow: row-reverse wrap;
     align-items: center;
-    background : 
-        url(../img/balloons.png) left top no-repeat,
-        url(../img/confettis.svg) fixed no-repeat,
-        #fdd1de;
-    background-position: 
-        10% 80%,
-        30px -200px;
-    background-size: 
-        420px,
-        1000px;
-    width : 100%;
+    background: url(../img/balloons.png) left top no-repeat, url(../img/confettis.svg) fixed no-repeat, #fdd1de;
+    background-position: 10% 80%, 30px -200px;
+    background-size: 420px, 1000px;
+    width: 100%;
     height: 500px;
 }
+
 .splash-content {
-    display      : flex;
-    flex-flow    : column;
-    width        : 53%;
+    display: flex;
+    flex-flow: column;
+    width: 53%;
     padding-right: 120px;
 }
+
 .splash-btn {
     background-color: #fff;
-    color           : #222222;
-} 
+    color: #222222;
+}
+
+
 /* ------------------------------------------------------------------------     SHOW BOXES */
-.banner-show { /* le conteneur des boxs */ 
-    display  : flex;
+
+.banner-show {
+    /* le conteneur des boxs */
+    display: flex;
     flex-flow: row wrap;
 }
-.show-box { /* s'adresse à chacune des boxs */
-    position      : relative;
-    display       : flex;
+
+.show-box {
+    /* s'adresse à chacune des boxs */
+    position: relative;
+    display: flex;
     flex-direction: column-reverse;
-    width         : calc(100%/3.05);
-    height        : 500px;
-    filter        : grayscale(100%);
-    transition    : 0.8s ease;
-    overflow      : hidden;
-}
-.show-box:hover {
-    filter    : none;
+    width: calc(100%/3.05);
+    height: 500px;
+    filter: grayscale(100%);
     transition: 0.8s ease;
-    width     : calc(100%/2.3);
+    overflow: hidden;
 }
-.show-row { /* la rangée de boxs du dessus */
-    display        : flex;
-    flex-flow      : row nowrap;
+
+.show-box:hover {
+    filter: none;
+    transition: 0.8s ease;
+    width: calc(100%/2.3);
+}
+
+.show-row {
+    /* la rangée de boxs du dessus */
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
-    width          : 100%;
-    margin         : 10px 0px;
+    width: 100%;
+    margin: 10px 0px;
 }
+
 .box1 {
     background: url(../img/parties.jpg) center/cover no-repeat;
-    filter        : grayscale(0%);
+    filter: grayscale(0%);
 }
+
 .box2 {
     background: url(../img/wedding.jpg) center/cover no-repeat;
-    margin    : 0px 10px;
+    margin: 0px 10px;
 }
+
 .box3 {
     background: url(../img/new.jpg) center/cover no-repeat;
 }
-.box4 { /* la box pleine largeur du dessous */
-    width     : 100%;
+
+.box4 {
+    /* la box pleine largeur du dessous */
+    width: 100%;
     background: url(../img/nue-kids.jpg) center/cover no-repeat;
-    transition    : 0.8s ease;
+    transition: 0.8s ease;
 }
+
 .box4:hover {
     width: 100%;
-    transition    : 0.8s ease;
+    transition: 0.8s ease;
 }
-.content-box { /* le bandeau blanc à l'intérieur de chaque box */ 
-    background: white;
-    width     : 100%;
-    height    : 0%;
-    opacity   : 0;
-    transition: 0.2s ease-in-out;
 
-}
-.show-box:hover .content-box {
-    opacity   : 1;
-    height    : 45%;
+.content-box {
+    /* le bandeau blanc à l'intérieur de chaque box */
+    background: white;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
     transition: 0.2s ease-in-out;
 }
-.txt-content { /* le bloc de contenu dans le bandeau blanc */ 
-    padding : 0 20px 50px;
-    position: relative;
-    bottom  : 0;
-    width   : 400px;
+
+.show-box:hover .content-box {
+    opacity: 1;
+    height: 45%;
+    transition: 0.2s ease-in-out;
 }
+
+.txt-content {
+    /* le bloc de contenu dans le bandeau blanc */
+    padding: 0 20px 50px;
+    position: relative;
+    bottom: 0;
+    width: 400px;
+}
+
 .txt-content h3 {
     text-transform: uppercase;
-    font-size     : 20px;
-    font-weight   : 400;
+    font-size: 20px;
+    font-weight: 400;
 }
+
 .txt-content p {
     /* width: 80%; */
-    font-size  : 13px;
+    font-size: 13px;
     line-height: 20px;
     font-weight: 300;
 }
+
 .showbox-btn {
     width: 100px;
 }
+
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!     MAIN        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
 /* *************************************        ABOUT / SERVICES       ******************************************** */
+
 .about {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 .art-img {
     position: relative;
     width: 600px;
     height: 600px;
 }
+
 .about .art-img {
     background: url(../img/about.jpg)no-repeat;
 }
+
 .art-img .katie {
-    background: 
-        url(../img/katie-cut-out.png) no-repeat center/cover,
-        #f7f7f7;
+    background: url(../img/katie-cut-out.png) no-repeat center/cover, #f7f7f7;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
     right: 5%;
     top: -5%;
 }
+
 .art-img span {
     background: #fff;
     position: absolute;
@@ -249,6 +315,7 @@ section {
     text-align: center;
     padding: 10px 0;
 }
+
 .art-txt {
     display: flex;
     flex-flow: column;
@@ -257,6 +324,7 @@ section {
     font-size: 14px;
     line-height: 22px;
 }
+
 .art-txt blockquote {
     display: block;
     border-left: 1.5px solid #fdd1de;
@@ -268,30 +336,38 @@ section {
     line-height: 22px;
     letter-spacing: 1px;
 }
+
 .art-txt blockquote strong {
     font-weight: 600;
 }
+
 .services {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
 }
+
 li {
     list-style: square;
     line-height: 35px;
 }
+
 .services .art-img {
     background: url(../img/services.jpg) no-repeat;
     height: 500px;
 }
+
+
 /* *************************************       BALLOONS       ******************************************** */
+
 .balloons-section {
-text-align: center;
-margin: 0 auto;
-display: flex;
-flex-flow: column nowrap;
-align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
+
 .balloons {
     text-align: center;
     display: flex;
@@ -300,6 +376,7 @@ align-items: center;
     padding: 20px;
     width: 80%;
 }
+
 .bln-article {
     display: flex;
     flex-flow: column wrap;
@@ -308,135 +385,172 @@ align-items: center;
     margin: 10px;
     width: 200px;
 }
+
 .bln-article p {
     width: 80%;
     font-size: 13px;
 }
+
 .balloons .circle-frame {
     margin: 0 0 30px 0;
     padding: 20px;
-    border: 
+    border:
 }
+
 .art1 {
     background: url(../img/bln1.jpeg) no-repeat top/cover;
 }
+
 .art2 {
     background: url(../img/bln2.jpeg) no-repeat top/cover;
 }
+
 .art3 {
     background: url(../img/bln3.jpeg) no-repeat top/cover;
 }
+
 .art4 {
     background: url(../img/bln4.jpg) no-repeat top/cover;
 }
+
 .art5 {
     background: url(../img/bln5.jpeg) no-repeat top/cover;
 }
+
 .art6 {
     background: url(../img/bln6.jpeg) no-repeat top/cover;
 }
+
 .art7 {
     background: url(../img/bln7.jpeg) no-repeat top/cover;
 }
+
 .art8 {
     background: url(../img/bln8.jpeg) no-repeat top/cover;
 }
+
 .art9 {
     background: url(../img/bln9.jpeg) no-repeat top/cover;
 }
+
 .art10 {
     background: url(../img/bln10.jpeg) no-repeat top/cover;
 }
+
 .art11 {
     background: url(../img/bln11.jpeg) no-repeat top/cover;
 }
+
 .art12 {
     background: url(../img/bln12.jpeg) no-repeat top/cover;
 }
+
 .art13 {
     background: url(../img/bln13.jpeg) no-repeat top/cover;
 }
+
 .art14 {
     background: url(../img/bln14.jpeg) no-repeat top/cover;
 }
+
 .art15 {
     background: url(../img/bln15.jpg) no-repeat top/cover;
 }
+
 .art16 {
     background: url(../img/bln16.jpg) no-repeat top/cover;
 }
+
 .bln-quote {
     font-size: 14px;
-    line-height: 25px;;
+    line-height: 25px;
+    ;
     width: 80%;
 }
+
 .bln-quote strong {
     font-weight: 500;
 }
+
 .two-btn {
     display: flex;
     width: 27%;
     justify-content: space-between;
 }
+
 .white-btn {
     border: 1px solid rgba(0, 0, 0, 0.2);
     color: black;
     background-color: white;
 }
+
+
 /* *************************************       INSTA       ******************************************** */
+
 .insta {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
+
 .insta-title span {
     font-size: 25px;
 }
+
 .insta-title span:not(.nobullet)::before {
     content: '•';
-    font-size: 30px; 
+    font-size: 30px;
     padding: 20px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+
 .insta-title p {
     font-weight: 700;
     font-style: italic;
     margin: 30px 0 20px 0;
 }
+
+
 /* *************************************       GALLERY       ******************************************** */
+
 .bottom-ban {
-    display    : flex;
+    display: flex;
     flex-flow: column;
     /* align-items: center; */
     justify-content: center;
     text-align: center;
-    background : 
-        url(../img/confettis.svg) fixed no-repeat,
-        #fdd1de;
+    background: url(../img/confettis.svg) fixed no-repeat, #fdd1de;
     background-position: 50% 200px;
     background-size: 1000px;
-    width : 100%;
+    width: 100%;
     height: 300px;
 }
+
 .banner-link {
     width: 100%;
 }
+
 .bottom-ban:hover {
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
+
 .bottom-ban p {
     text-transform: none;
     font-weight: 500;
     font-size: 12px;
 }
+
 .bottom-ban h2 {
     text-transform: none;
     font-size: 40px;
     font-weight: 400;
 }
+
+
 /* *************************************       CONTACT       ******************************************** */
+
 section.contact {
     background: black;
     height: 400px;
@@ -446,6 +560,7 @@ section.contact {
     text-align: center;
     color: white;
 }
+
 .line-bloc {
     display: flex;
     flex-flow: column;
@@ -455,54 +570,65 @@ section.contact {
     width: 80%;
     margin: 50px;
 }
+
 .contact h2 {
     color: white;
     margin: 0px;
     line-height: 40px;
 }
+
 .contact a {
     color: white;
     margin: 10px 20px;
     text-transform: none;
 }
+
 .contact .bold {
     font-size: 30px;
     font-weight: 700;
     margin: 0 0 20px;
 }
+
 .contact .mail::before {
-    content:'';
+    content: '';
     background: url(../img/icon_mail.svg) left no-repeat;
     background-size: 22px 22px;
     padding: 5px 10px 5px 30px;
 }
+
 .contact .phone::before {
-    content:'';
+    content: '';
     background: url(../img/icon_gsm.svg) left no-repeat;
     background-size: 22px 22px;
     padding: 5px 10px 5px 30px;
 }
 
-.contact .icon-box{
+.contact .icon-box {
     margin: 0 auto;
     display: flex;
     justify-content: center;
     font-size: 14px;
     font-weight: 600;
 }
+
 .icon {
     transition: 0.2s ease-in-out;
 }
+
 .icon:hover {
     color: rgba(100, 100, 100, 0.8);
     transition: 0.2s ease-in-out;
 }
+
 .icon:hover::before,
 .icon:focus::before {
-    filter: invert(50%);    
+    filter: invert(50%);
     transition: 0.2s ease-in-out;
 }
+
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!     FOOTER        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
 .footer {
     position: relative;
     background: url(../img/bg.jpg);
@@ -512,20 +638,23 @@ section.contact {
     flex-flow: column nowrap;
     justify-content: flex-end;
     align-items: center;
-    border:1px solid red;
+    /* border:1px solid red; */
     color: white;
     font-size: 25px;
 }
+
 [alt="logo-footer"] {
     width: 500px;
     margin: 200px 0 120px;
 }
+
 .social-icons {
     display: flex;
     flex-flow: row nowrap;
     width: 40%;
     justify-content: space-evenly;
 }
+
 .icon-flex {
     display: flex;
     flex-flow: column nowrap;
@@ -534,27 +663,32 @@ section.contact {
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
+
 .fb-icon::before {
-    content:'';
+    content: '';
     background: url(../img/fb.svg) top no-repeat;
     background-size: 50px 50px;
     padding: 50px 50px 20px;
 }
+
 .insta-icon::before {
-    content:'';
+    content: '';
     background: url(../img/insta.svg) top no-repeat;
     background-size: 50px 50px;
     padding: 50px 50px 20px;
 }
+
 .icon-flex:hover {
     color: rgba(100, 100, 100, 0.8);
     transition: 0.2s ease-in-out;
 }
+
 .icon-flex:hover::before,
 .icon-flex:focus::before {
-    filter: invert(50%);    
+    filter: invert(50%);
     transition: 0.2s ease-in-out;
 }
+
 .bottom-line {
     margin: 20px;
     display: flex;
@@ -562,6 +696,7 @@ section.contact {
     align-items: flex-end;
     justify-content: flex-start;
 }
+
 .mention {
     position: absolute;
     left: 80px;
@@ -570,11 +705,13 @@ section.contact {
     font-weight: 400;
     color: white;
 }
+
 .mention a {
     color: lightgray;
     text-transform: none;
     font-weight: 600;
 }
+
 [alt="bapia-logo"] {
     width: 200px;
     margin-bottom: 20px;
